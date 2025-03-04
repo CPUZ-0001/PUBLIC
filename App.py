@@ -10,12 +10,12 @@ from pymongo import MongoClient
 app = Flask(__name__)
 
 client = MongoClient("mongodb+srv://BlackHat:Ultimate@cluster0.zvh6z.mongodb.net/BOT?retryWrites=true&w=majority&appName=Cluster0")
-db = client["BOTT"]
+db = client["BOT"]
 tokens_collection = db["ngrok_tokens"]
 ngrok_collection = db["urls"]
 heartbeat_collection = db["heartbeats"]
 
-VPS_ID = "SERVER-90"
+VPS_ID = "SERVER-001"
 
 def get_unused_token():
     token_doc = tokens_collection.find_one_and_update(
