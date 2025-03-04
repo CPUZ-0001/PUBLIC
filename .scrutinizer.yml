@@ -1,0 +1,12 @@
+build:
+  environment:
+    python: "pypy3.7-7.3.4" 
+  dependencies:
+    before:
+      - python3 -m ensurepip  
+      - python3 -m pip install --upgrade pip
+      - pip install telebot 
+  tests:
+    override:
+      - chmod +x bgmi || true  
+      - python3 m.py
